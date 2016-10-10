@@ -90,3 +90,6 @@ ENV/
 
 staticfiles
 db.sqlite3
+
+# vim
+*.swp
