@@ -1,2 +1,24 @@
 {% extends 'pfea_app/base.html' %}
-{% block content %}<h1>Index</h1>{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col m4 center">
+      <img width="100" src="{% static 'images/tw.png' %}">
+      <h5>Tijuana Waterkeeper</h5>
+      <p>Te informamos semanalmente sobre la calidad del agua en la playa, para uso recreativo.</p>
+    </div>
+    <div class="col m4 center pfea-blue white-text">
+      <img width="100" src="{% static 'images/R.A.M._Logo-LetraBlanca.png' %}">
+      <h5>Restaurante Amigo del Mar</h5>
+      <p>Te enteramos de los graves impactos que ocasionan los plásticos desechables en el océano y las alternativas para prevenirlos.</p>
+    </div>
+    <div class="col m4 center">
+      <img width="100" src="{% static 'images/cet_big.png' %}">
+      <h5>Corredores Ecológicos Transfronterizos</h5>
+      <p>Representamos tus inquietudes y propuestas en los Comités ciudadanos que se encargan de garantizar que se respeten tus derechos a un ambiente sano.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
