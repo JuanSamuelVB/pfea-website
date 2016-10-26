@@ -1,34 +1,78 @@
-  <nav class="pfea-blue">
-    <div class="nav-wrapper container">
-      <a href="{% url 'pfea_app:index' %}" class="brand-logo">PFEA</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="{% url 'pfea_app:index' %}">Inicio</a></li>
-        <li>
-          <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="quienes-somos-dropdown">
-            Quiénes somos
-            <i class="material-icons right">arrow_drop_down</i>
-          </a>
-        <li>
-          <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="programas-dropdown">
-            Programas
-            <i class="material-icons right">arrow_drop_down</i>
-          </a>
-        </li>
-        <li><a href="#">Eventos</a></li>
-        <li><a href="#">Apóyanos</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="pfea-blue">
+  <div class="nav-wrapper container">
+    <!-- Navbar -->
+    <a href="{% url 'pfea_app:index' %}" class="brand-logo">PFEA</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="{% url 'pfea_app:index' %}">Inicio</a></li>
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="quienes-somos-dropdown">
+          Quiénes somos
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="programas-dropdown">
+          Programas
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Apóyanos</a></li>
+    </ul>
 
-  <ul id="quienes-somos-dropdown" class="dropdown-content">
-    <li><a href="{% url 'pfea_app:mvp' %}">Misión, visión y principios</a></li>
-    <li><a href="{% url 'pfea_app:mensaje_direccion' %}">Mensaje de la dirección</a></li>
-    <li><a href="{% url 'pfea_app:logros' %}">Logros</a></li>
-    <li><a href="{% url 'pfea_app:rec_y_cert' %}">Reconocimientos y certificaciones</a></li>
-  </ul>
+    <!-- SideNav -->
+    <ul class="side-nav" id="mobile-demo">
+      <!-- Inicio -->
+      <li><a href="{% url 'pfea_app:index' %}">Inicio</a></li>
+      <!-- Quienes somos -->
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Quiénes somos
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="{% url 'pfea_app:mvp' %}">Misión, visión y principios</a></li>
+            <li><a href="{% url 'pfea_app:mensaje_direccion' %}">Mensaje de la dirección</a></li>
+            <li><a href="{% url 'pfea_app:logros' %}">Logros</a></li>
+            <li><a href="{% url 'pfea_app:rec_y_cert' %}">Reconocimientos y certificaciones</a></li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
+      <!-- Proramas -->
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Programas
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="{% url 'pfea_app:ram' %}">Restaurantes Amigos del Mar</a></li>
+            <li><a href="{% url 'pfea_app:t_waterkeeper' %}">Tijuana Waterkeeper</a></li>
+            <li><a href="{% url 'pfea_app:corredores' %}">Corredores ecológicos</a></li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
+      <!-- Eventos -->
+      <li><a href="#">Eventos</a></li>
+      <!-- Apoyanos -->
+      <li><a href="#">Apóyanos</a></li>
+    </ul>
 
-  <ul id="programas-dropdown" class="dropdown-content">
-    <li><a href="{% url 'pfea_app:ram' %}">Restaurantes Amigos del Mar</a></li>
-    <li><a href="{% url 'pfea_app:t_waterkeeper' %}">Tijuana Waterkeeper</a></li>
-    <li><a href="{% url 'pfea_app:corredores' %}">Corredores ecológicos</a></li>
-  </ul>
+  </div>
+</nav>
+
+<ul id="quienes-somos-dropdown" class="dropdown-content">
+  <li><a href="{% url 'pfea_app:mvp' %}">Misión, visión y principios</a></li>
+  <li><a href="{% url 'pfea_app:mensaje_direccion' %}">Mensaje de la dirección</a></li>
+  <li><a href="{% url 'pfea_app:logros' %}">Logros</a></li>
+  <li><a href="{% url 'pfea_app:rec_y_cert' %}">Reconocimientos y certificaciones</a></li>
+</ul>
+
+<ul id="programas-dropdown" class="dropdown-content">
+  <li><a href="{% url 'pfea_app:ram' %}">Restaurantes Amigos del Mar</a></li>
+  <li><a href="{% url 'pfea_app:t_waterkeeper' %}">Tijuana Waterkeeper</a></li>
+  <li><a href="{% url 'pfea_app:corredores' %}">Corredores ecológicos</a></li>
+</ul>
