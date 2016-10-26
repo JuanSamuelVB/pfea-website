@@ -1,0 +1,30 @@
+{% extends 'pfea_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
+  <h1 class="center-block white-text">Mensaje de la dirección</h1>
+</div>
+
+<!-- Mensaje -->
+<div class="container just">
+  <div class="row">
+    <div class="col m12">
+    <p>Es para mi un gusto el poder presentar ante ustedes este nuevo espacio de intercomunicación, con el que se pretende mostrar lo que ha sido a lo largo de 23 años el camino recorrido por Proyecto Fronterizo de Educación Ambiental A.C. (PFEA), un camino que refleja la historia y esfuerzo de un grupo de profesionales comprometidos, que hicieron de una idea una realidad, y compartirles día a día lo que hacemos e invitarlos a sumarse a nuestra visión del futuro.</p>
+    <p>Siempre he creído que la mayor riqueza del individuo son los sueños que anhelamos alcanzar. Mi sueño personal es que todos podamos disfrutar de nuestra playa, un lugar mágico y punto de encuentro, hoy y mañana, como lo hice de niña, creciendo en una comunidad costera. Como Directora de PFEA, mi sueño es ver una Tijuana con sus rìos llenos de vida y su costa vibrante y sana. En este sentido, el mayor desafìo ha sido lograr que nuestra comunidad reconozca, primeramente, que vivimos en una ciudad ribereña y costera, y luego, que es el deber de todos preservar y proteger la riqueza que se encuentra en nuestros arroyos y costas. La protecciòn de servicios ambientales que estas fuentes de vida brindan al espacio que habitamos, es un paso fundamental para que sus habitantes gocen de calidad de vida y Tijuana se realice en todos los demás aspectos.</p>
+    <p>Quizás debido a este reto, la trayectoria de Proyecto Fronterizo haya resultado ser una aventura tan emocionante y rica en enseñanzas tanto de formaciòn ciudadana como de conocimiento ambiental; una verdadera escuela sobre las formas de incidir en la política e influir positivamente en las conductas de la comunidad a la que servimos. He tenido la gran fortuna de contar con un equipo de trabajo de verdaderos guerreros atrevidos, talentosos, incansables y comprometidos. También es un honor y privilegio trabajar bajo la guía y amparo de un Consejo Directivo constituido por colegas profesionistas que comparten las aspiraciones y pasión de Proyecto Fronterizo y estàn incondicionalmente a nuestra disposiciòn, asesorando y asegurando la rectitud de nuestro rumbo.</p>
+    <p>Confío que este sueño es posible porque a lo largo de este camino veo cómo mucha gente, particularmente los jóvenes, se une a esta causa y acciona por sí misma, colaborando entre sí y con la naturaleza que los rodea. Estoy segura de que ésto es la base para el cambio que se requiere para transitar hacia un mundo mejor.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+{% endblock %}

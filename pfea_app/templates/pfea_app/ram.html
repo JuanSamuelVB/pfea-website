@@ -1,0 +1,39 @@
+{% extends 'pfea_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
+  <h1 class="center-block white-text">Restaurantes Amigos del Mar</h1>
+</div>
+
+<!-- Que es -->
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+      <h3>¿Qué es?</h3>
+      <div class="divider"></div>
+      <h4>Beneficios</h4>
+      <p>Los restaurantes que se certifiquen como Restaurante Amigo del Mar, recibirán los siguientes beneficios:</p>
+      <ul class="browser-default">
+        <li>Promoción a más de 5,000 consumidores a través de los canales de comunicación y eventos de PFEA (incluyendo las campañas de limpieza bianuales de Salvemos La Playa).</li>
+        <li>Promoción a más de 30,000 consumidores de San Diego a través de los canales de comunicación de Surfrider Foundation San Diego (redes sociales, pagina web, envíos masivos de email y eventos comunitarios)</li>
+        <li>Promoción a más de 50,000 consumidores en los canales de comunicación de aliados del Programa Restaurantes Amigos del Mar como CANIRAC, Dirección de Protección al Ambiente, Delegación Playas de Tijuana, WasteLab AC, Pura Kai.</li>
+        <li>Materiales informativos y de promoción para uso dentro del restaurante.</li>
+        <li>Diseños para la producción de piezas adicionales de promoción.</li>
+        <li>Entrenamiento de personal del restaurante sobre mejores prácticas requeridas por la certificación.</li>
+        <li>Tambos para el acopio de materiales reciclables y servicio de recolección semanal gratuito.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+{% endblock %}

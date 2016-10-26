@@ -1,0 +1,29 @@
+{% extends 'pfea_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
+  <h1 class="center-block white-text">Corredores ecológicos transfronterizos</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col m12 center">
+      <h3>Trabajamos para proteger las áreas naturales y espacios abiertos interconectados que brindan servicios ambientales al a cuenca del Río Tijuana en su naturaleza binacional, por sus beneficios para la comunidad y los ecosistemas</h3>
+      <h4>Proyectos</h4>
+      <p>Arroyo Alamar</p>
+      <p>Parque de Conservación Cañada de los Sauces</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+{% endblock %}

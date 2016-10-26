@@ -1,8 +1,8 @@
   <nav class="pfea-blue">
     <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">PFEA</a>
+      <a href="{% url 'pfea_app:index' %}" class="brand-logo">PFEA</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="{% url 'pfea_app:index' %}">Inicio</a></li>
         <li>
           <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="quienes-somos-dropdown">
             Quiénes somos
@@ -22,13 +22,13 @@
 
   <ul id="quienes-somos-dropdown" class="dropdown-content">
     <li><a href="{% url 'pfea_app:mvp' %}">Misión, visión y principios</a></li>
-    <li><a href="#">Mensaje de la dirección</a></li>
-    <li><a href="#">Logros</a></li>
-    <li><a href="#">Reconocimientos y certificaciones</a></li>
+    <li><a href="{% url 'pfea_app:mensaje_direccion' %}">Mensaje de la dirección</a></li>
+    <li><a href="{% url 'pfea_app:logros' %}">Logros</a></li>
+    <li><a href="{% url 'pfea_app:rec_y_cert' %}">Reconocimientos y certificaciones</a></li>
   </ul>
 
   <ul id="programas-dropdown" class="dropdown-content">
-    <li><a href="#">Restaurantes Amigos del Mar</a></li>
-    <li><a href="#">Tijuana Waterkeeper</a></li>
-    <li><a href="#">Corredores ecológicos</a></li>
+    <li><a href="{% url 'pfea_app:ram' %}">Restaurantes Amigos del Mar</a></li>
+    <li><a href="{% url 'pfea_app:t_waterkeeper' %}">Tijuana Waterkeeper</a></li>
+    <li><a href="{% url 'pfea_app:corredores' %}">Corredores ecológicos</a></li>
   </ul>
