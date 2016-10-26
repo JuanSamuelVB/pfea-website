@@ -52,3 +52,17 @@ footer.page-footer {
     top: 0;
     background-color: rgba(0, 0, 50, 0.4);
 }
+
+/* Suscripcion */
+
+.suscripcion {
+    padding: 3em;
+}
+
+.suscripcion input[type='text'] {
+    max-width: 500px;
+}
+
+.suscripcion div.col {
+    margin-bottom: 1em;
+}
