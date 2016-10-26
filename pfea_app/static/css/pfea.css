@@ -1,6 +1,14 @@
 /******************************
-/* Base
+/* General
+/******************************/
+
+.parallax-container {
+    font-weight: 300;
+}
+
 /******************************
+/* Base
+/******************************/
 
 /* Footer */
 
@@ -10,7 +18,7 @@ footer.page-footer {
 
 /******************************
 /* Inicio
-/******************************
+/******************************/
 
 /* Programas */
 
@@ -38,7 +46,6 @@ footer.page-footer {
     padding-top: 4vw;
     padding-bottom: 4vw;
     z-index: 1;
-    font-weight: 300;
 }
 
 .estadisticas h4 {
