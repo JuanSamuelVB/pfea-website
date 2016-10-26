@@ -1,0 +1,54 @@
+/***************************
+/* Base
+/***************************
+
+/* Footer */
+
+footer.page-footer {
+    margin-top: -6px;
+}
+
+/***************************
+/* Inicio
+/***************************
+
+/* Programas */
+
+.programa-hp {
+    padding: 1em;
+}
+
+@media (min-width: 993px) {
+    .programa-hp {
+        min-height: 400px;
+    }
+}
+
+.programas {
+    margin-bottom: 0;
+}
+
+/* Estadisticas */
+
+.estadisticas-parallax {
+    height: auto;
+}
+
+.estadisticas {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    z-index: 1;
+    font-weight: 300;
+}
+
+.estadisticas h4 {
+    font-weight: bold;
+}
+
+.estadisticas-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 50, 0.4);
+}
