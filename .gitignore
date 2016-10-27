@@ -93,3 +93,6 @@ db.sqlite3
 
 # vim
 *.swp
+
+#migraciones
+pfea_app/migrations/
