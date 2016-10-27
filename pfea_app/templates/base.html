@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>{% block title %}Proyecto Fronterizo de Educación Ambiental{% endblock %}</title>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'icons/material-design/iconfont/material-icons.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/pfea_colors.css' %}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/pfea.css' %}" media="screen,projection"/>
+  </head>
+
+  <body>
+
+    {% include 'navbars/navbar.html' %}
+    {% block content %}{% endblock %}
+    {% include 'footers/footer.html' %}
+
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/pfea-script.js' %}"></script>
+
+    {% block javascript %}
+    {% endblock %}
+  </body>
+</html>

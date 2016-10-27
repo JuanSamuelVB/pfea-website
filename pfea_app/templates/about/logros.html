@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
+  <h1 class="center-block center white-text">Logros</h1>
+</div>
+
+<!-- Logros -->
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+    <h3 class="center">25 años sumando esfuerzos protegiendo nuestro océano, arroyos y costas</h3>
+    <h3>Lo que hicimos</h3>
+    <ul class="browser-default">
+      <li>Incidimos en la normatividad federal para lograr que pudieran ser donatarias autorizadas las organizaciones ambientalistas dedicadas a otros temas aparte de la conservación de especies.</li>
+      <li>Formamos a una nueva generación  de líderes jóvenes ambientalistas en Tijuana.</li>
+      <li>Produjimos un currículo inédito especializado en los ecosistemas costeros de esta cuenca para impartir talleres de educación ambiental. </li>
+      <li>Fuimos promoventes pioneros del derecho a la información ambiental incidiendo en la normatividad federal y del estado y municipios de B.C.</li>
+      <li>Organizamos primera iniciativa ciudadana de vinculación entre mas de 1,500 ambientalistas de los 10 estados fronterizos de ambos lados de la frontera para hablar sobre temas ambientales.</li>
+      <li>Logramos la movilización de mas de 45,000 voluntarios para la limpieza y cuidado de las playas, arroyos y cañadas a escala estatal y remoción 220 toneladas a lo largo de 15 años.</li>
+      <li>Conducimos el primero y único  programa de monitoreo de cumplimiento de los gobiernos municipales y del estado con sus obligaciones de transparencia de información pública.</li>
+      <li>Operamos el primer laboratorio ciudadano de Baja California que genera avisos sistemáticos al público sobre la seguridad de la calidad de las aguas costeras para uso recreativo.</li>
+      <li>Somos líderes en el rescate de 35 ha. de ecosistema ripario del Arroyo Alamar y el Parque de Conservación Cañada de los Sauces.</li>
+      <li>Ayudamos a preservar el hábitat de especies en peligro de extinción y amenazadas, como son el pelícano café, el lobo marino y el delfín y otras que transitan frente a nuestras costas.</li>
+    </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col m12">
+      <h3>Lo que hacemos</h3>
+    </div>
+    <div class="col m3">
+      <h5>Visitante de la playa</h5>
+      <ul class="browser-default">
+        <li>Te informamos semanalmente sobre la calidad del agua de la playa, para uso recreativo.</li>
+        <li>Patrullamos la playa continuamente para advertir alguna anomalía ambiental.</li>
+      </ul>
+    </div>
+    <div class="col m3">
+      <h5>Jóven</h5>
+      <ul class="browser-default">
+        <li>Te capacitamos como líder ambiental juvenil de tu escuela y tu colonia.</li>
+        <li>Te capacitamos como capitán de sitio para las campañas de limpieza “Salvemos la Playa”.</li>
+        <li>Te ofrecemos un espacio de aprendizaje donde liberar tus horas de servicio social.</li>
+      </ul>
+    </div>
+    <div class="col m3">
+      <h5>Vecinos, líderes comunitarios, maestros</h5>
+      <ul class="browser-default">
+        <li>Te asesoramos en tus gestiones por preservar ecosistemas y biodiversidad bajo amenaza.</li>
+        <li>Te enseñamos sobre el valor de las especies y el ecosistema costero y ribereño que nos rodea.</li>
+        <li>Te hacemos llegar información ambiental relevante, interesante y de manera constante.</li>
+        <li>Representamos tus inquietudes y propuestas en los Comités ciudadanos que se encargan de garantizar que se respeten tus derechos a un ambiente sano.</li>
+      </ul>
+    </div>
+    <div class="col m3">
+      <h5>Dueño y cliente de restaurantes</h5>
+      <ul class="browser-default">
+        <li>Te otorgamos una certificación como Restaurante Amigo Del Mar.</li>
+        <li>Te enteramos de los graves impactos que ocasionan los plásticos desechables en el océano y las alternativas para prevenirlos.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+{% endblock %}

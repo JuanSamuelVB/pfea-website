@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
+  <h1 class="center-block center white-text">Misión, visión y principios</h1>
+</div>
+
+<!-- Misión y visión -->
+<div class="center">
+  <div class="container row mvp-seccion">
+    <div class="col s12 l6">
+      <h3>Misión</h3>
+      <p>Trabajamos para proteger el océano, arroyos y costas de nuestra cuenca.</p>
+    </div>
+    <div class="col s12 l6">
+      <h3>Visión</h3>
+      <p>Una cuenca costera conectada por ríos vivos y protegida por una comunidad que participa en el rescate de su patrimonio hídrico.</p>
+    </div>
+  </div>
+  <div class="mvp-seccion pfea-green white-text">
+    <div class="container">
+    <div class="col s12 l12">
+      <h3>Principios</h3>
+    </div>
+    <div class="row">
+    <div class="col s12 l6">
+      <h4>Trabajamos y actuamos en comunidad</h4>
+      <p>Propiciamos la colaboración incluyente, el diálogo transparente, el consenso y la corresponsabilidad.</p>
+    </div>
+    <div class="col s12 l6">
+      <h4>Ciencia y hechos son el fundamento</h4>
+      <p>Fundamentamos nuestras opiniones en datos científicos y oficiales, y dentro de un marco de la cultura de la legalidad.</p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col s12 l6">
+      <h4>Enfoque de cuenca como base</h4>
+      <p>Actuamos localmente para rescatar el patrimonio hídrico global.</p>
+    </div>
+    <div class="col s12 l6">
+      <h4>Predicamos con el ejemplo</h4>
+      <p>Lo que decimos, lo hacemos y podemos demostrarlo.</p>
+    </div>
+    </div>
+    <div class="col s12 l12">
+      <h4>Natura y cultura son una</h4>
+      <p>Creemos que las fronteras son artificiales ya que las comunidades naturales y humanas están interconectadas.</p>
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+</script>
+{% endblock %}
