@@ -1,7 +1,9 @@
-<nav class="pfea-blue">
+{% load static %}
+
+<nav class="pfea-white">
   <div class="nav-wrapper container">
     <!-- Navbar -->
-    <a href="{% url 'pfea_app:index' %}" class="brand-logo">PFEA</a>
+    <a href="{% url 'pfea_app:index' %}" class="brand-logo"><img class="logo small" src="{% static '/images/pfea_logo-2.png' %}"></a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a href="{% url 'pfea_app:index' %}">Inicio</a></li>
