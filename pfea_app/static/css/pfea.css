@@ -10,6 +10,39 @@
 /* Base
 /******************************/
 
+/* Navbar */
+
+img.logo.small{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+img.logo.mid {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+img.logo.large {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+nav.pfea-blue {
+    background-color: #0054a6 !important;
+}
+
+nav.pfea-blue a{
+    color: #ffffff;
+}
+
+nav.pfea-white {
+    background-color: #ffffff !important;
+}
+
+nav.pfea-white a {
+    color: #0054a6;
+}
+
 /* Footer */
 
 footer.page-footer {

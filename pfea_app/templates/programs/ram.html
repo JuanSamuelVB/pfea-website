@@ -10,30 +10,97 @@
 
 <!-- Que es -->
 <div class="container">
-  <div class="row">
-    <div class="col m12">
-      <h3>¿Qué es?</h3>
-      <div class="divider"></div>
-      <h4>Beneficios</h4>
-      <p>Los restaurantes que se certifiquen como Restaurante Amigo del Mar, recibirán los siguientes beneficios:</p>
-      <ul class="browser-default">
-        <li>Promoción a más de 5,000 consumidores a través de los canales de comunicación y eventos de PFEA (incluyendo las campañas de limpieza bianuales de Salvemos La Playa).</li>
-        <li>Promoción a más de 30,000 consumidores de San Diego a través de los canales de comunicación de Surfrider Foundation San Diego (redes sociales, pagina web, envíos masivos de email y eventos comunitarios)</li>
-        <li>Promoción a más de 50,000 consumidores en los canales de comunicación de aliados del Programa Restaurantes Amigos del Mar como CANIRAC, Dirección de Protección al Ambiente, Delegación Playas de Tijuana, WasteLab AC, Pura Kai.</li>
-        <li>Materiales informativos y de promoción para uso dentro del restaurante.</li>
-        <li>Diseños para la producción de piezas adicionales de promoción.</li>
-        <li>Entrenamiento de personal del restaurante sobre mejores prácticas requeridas por la certificación.</li>
-        <li>Tambos para el acopio de materiales reciclables y servicio de recolección semanal gratuito.</li>
-      </ul>
+    <div class="row">
+        <div class="col m12">
+            <h3>¿Qué es?</h3>
+            <div class="divider"></div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col m4">
+                    <div class="row">
+                        <img class="logo mid" src="{% static 'images/R.A.M._Logo-01.png' %}">
+                    </div>
+                </div>
+                <div class="col m8">
+                    <div class="row">
+                        <h4>El Programa de Certificación</h4>
+                    </div>
+                    <div class="row">
+                        <h4>Restaurante Amigo del Mar</h4>
+                    </div>
+                    <div class="row">
+                        <h5>Trabajamos con restaurantes locales para reducir la cantidad de desechables de plástico que usan en su servicio, así como los residuos producidos a consecuencia, que están contaminando nuestras playas y el océano.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-{% endblock %}
 
-{% block javascript %}
-<script>
-  $(document).ready(function(){
-    $('.parallax').parallax();
-  });
-</script>
+<div class="row pfea-blue">
+    <div class="container" style="padding-top: 20px;">
+        <div class="col m4">
+            <div class="row" style="padding-bottom: 40px; border-bottom: 1px solid #ffffff;">
+                <h5 class="white-text">¿Cómo funciona?</h5>
+            </div>
+            <div class="row">
+                <h5 class="white-text">¿Cómo convertirse en Restaurante Amigo del Mar?</h5>
+            </div>
+            <div class="row">
+                <p class="green-text">Los restaurantes se comprometen a adoptar voluntariamente prácticas que reducen la generación de desechables de plástico de un solo uso,  principales contaminantes de playas y el océano.</p>
+            </div>
+        </div>
+        <div class="col m8">
+            <ul class="white-text">
+                <li><span class="grey-text">1. </span>Eliminar el uso de desechables para servicio dentro del restaurante, utilizando sólo platos, vasos y cubiertos reutilizables.</li>
+                <li><span class="grey-text">2. </span>Aplicar mejores prácticas de separación y disposición de residuos reciclables.</li>
+                <li><span class="grey-text">3. </span>Proveer popotes sólo a petición del cliente.</li>
+                <li><span class="grey-text">4. </span>Eliminar el uso de recipientes de unicel en servicios para llevar y reemplazarlos por otros materiales reciclados, reciclables, compostables o biodegradables.</li>
+                <li><span class="grey-text">5. </span>Reemplazar las bolsas de plástico por bolsas reutilizables y/o compostables o biodegradables en los servicios para llevar.</li>
+                <li><span class="grey-text">6. </span>Proveer bolsas y utensilios desechables sólo a petición del cliente en servicios para llevar.</li>
+                <li><span class="grey-text">7. </span>Eliminar la venta de bebidas preparadas en botellas de plástico.</li>
+                <li><span class="grey-text">8. </span>Servir agua natural embotellada sólo a petición del cliente.</li>
+                <li><span class="grey-text">9. </span>Ofrecer un programa de incentivos para clientes que lleven sus propias bolsas, tazas, y recipientes reutilizables.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col m4">
+            <h4>Beneficios</h4>
+            <img class="logo mid" src="{% static 'images/RAM_Bajale-02.png' %}">
+        </div>
+        <div class="col m8">
+            <h5>Los restaurantes que se certifiquen como Restaurante Amigo del Mar, recibirán los siguientes beneficios:</h5>
+            <ul class="browser-default">
+                <li>Promoción a más de 5,000 consumidores a través de los canales de comunicación y eventos de PFEA (incluyendo las campañas de limpieza bianuales de Salvemos La Playa).</li>
+                <li>Promoción a más de 30,000 consumidores de San Diego a través de los canales de comunicación de Surfrider Foundation San Diego (redes sociales, pagina web, envíos masivos de email y eventos comunitarios)</li>
+                <li>Promoción a más de 50,000 consumidores en los canales de comunicación de aliados del Programa Restaurantes Amigos del Mar como CANIRAC, Dirección de Protección al Ambiente, Delegación Playas de Tijuana, WasteLab AC, Pura Kai.</li>
+                <li>Materiales informativos y de promoción para uso dentro del restaurante.</li>
+                <li>Diseños para la producción de piezas adicionales de promoción.</li>
+                <li>Entrenamiento de personal del restaurante sobre mejores prácticas requeridas por la certificación.</li>
+                <li>Tambos para el acopio de materiales reciclables y servicio de recolección semanal gratuito.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="row center">
+        <div class="col m12">
+            <img src="{% static 'images/ProcesoCertificacion-1024x480.png' %}" style="width: 100%;">
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row center">
+        <div class="col m12">
+            <img src="{% static 'images/RAM_problematica-01.jpg' %}" style="width: 100%;">
+        </div>
+    </div>
+</div>
 {% endblock %}
