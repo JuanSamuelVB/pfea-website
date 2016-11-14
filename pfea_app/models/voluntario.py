@@ -56,5 +56,5 @@ class Voluntario(models.Model):
         db_table = 'voluntario'
         app_label = 'pfea_app'
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s, %s Programa = %s"%(self.Nombre, self.Apellido, self.get_Programa_display())

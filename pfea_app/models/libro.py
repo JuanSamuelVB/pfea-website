@@ -1,19 +1,18 @@
 from django.db import models
 
 class Libro (models.Model):
-    Titulo = models.CharField(max_length = 200)
     Autor = models.CharField(max_length = 150)
+    Ano = models.CharField(max_length=4)
+    Titulo = models.CharField(max_length = 200)
     Edicion = models.CharField(max_length = 20)
     Publicacion = models.CharField(max_length = 40)
     Editorial = models.CharField(max_length = 50)
-    Ano = models.CharField(max_length=4)
-    Paginas = models.IntegerField()
-    Volumen = models.CharField(max_length=10)
-    Cantidad = models.IntegerField()
+    Volumen = models.CharField(max_length=10, blank = True, null=True)
+    Cantidad = models.IntegerField(default=1)
 
     class Meta:
         db_table = 'libro'
         app_label = 'pfea_app'
 
-    def __unicode__(self):
-        return "%s, Autor: %s, Volumen: %s"%(self.Titulo, self.Autor, self.Volumen)
+    def __str__(self):
+        return "Autor: %s, Titulo: %s, Ano: %s"%(self.Titulo, self.Autor, self.Ano)
