@@ -19,7 +19,12 @@
         </a>
       </li>
       <li><a href="#">Eventos</a></li>
-      <li><a href="#">Apóyanos</a></li>
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="apoyanos-dropdown">
+          Apóyanos
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
     </ul>
 
     <!-- SideNav -->
@@ -60,7 +65,19 @@
       <!-- Eventos -->
       <li><a href="#">Eventos</a></li>
       <!-- Apoyanos -->
-      <li><a href="#">Apóyanos</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Apóyanos
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="#">Donativos</a></li>
+            <li><a href="#">Voluntarios</a></li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
     </ul>
 
   </div>
@@ -77,4 +94,9 @@
   <li><a href="{% url 'pfea_app:ram' %}">Restaurantes Amigos del Mar</a></li>
   <li><a href="{% url 'pfea_app:t_waterkeeper' %}">Tijuana Waterkeeper</a></li>
   <li><a href="{% url 'pfea_app:corredores' %}">Corredores ecológicos</a></li>
+</ul>
+
+<ul id="apoyanos-dropdown" class="dropdown-content">
+  <li><a href="{% url 'pfea_app:donativos' %}">Donativos</a></li>
+  <li><a href="#">Voluntarios</a></li>
 </ul>
