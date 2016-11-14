@@ -9,6 +9,8 @@ from .views.reconocimientos_certificaciones import RecYCertView
 from .views.ram import RamView
 from .views.tijuana_waterkeeper import TWaterkeeperView
 from .views.corredores_ecologicos import CorredoresEcologicosView
+from .views.herramientas import HerramientaList
+from .views.libros import LibroList
 
 app_name = 'pfea_app'
 urlpatterns = [
@@ -20,4 +22,6 @@ urlpatterns = [
     url(r'^ram/$', RamView.as_view(), name='ram'),
     url(r'^tijuana-waterkeeper/$', TWaterkeeperView.as_view(), name='t_waterkeeper'),
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
+    url(r'^herramientas/$', HerramientaList.as_view(), name='lista_herramientas'),
+    url(r'^libros/$', LibroList.as_view(), name='lista_libros'),
 ]

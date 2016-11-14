@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<table class="centered highlight responsive-table">
+  <thead>
+    <tr>
+      <th data-field="">Concepto</th>
+      <th data-field="">Marca</th>
+      <th data-field="">Modelo</th>
+      <th data-field="">Numero de Serie</th>
+      <th data-field="">Descripcion</th>
+      <th data-field="">Cantidad</th>
+      <th data-field="">Codigo</th>
+    <tr>
+  </thead>
+  {% for item in object_list %}
+  <tbody>
+    <td> {{item.Concepto}}</td>
+    <td> {{item.Marca}}</td>
+    <td> {{item.Modelo}}</td>
+    <td> {{item.Numero_Serie}}</td>
+    <td> {{item.Descripcion}}</td>
+    <td> {{item.Cantidad}}</td>
+    <td> {{item.Codigo}}</td>
+  </tbody>
+  {% endfor %}
+</table>
+
+{% endblock %}

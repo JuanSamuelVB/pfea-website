@@ -15,4 +15,4 @@ class Libro (models.Model):
         app_label = 'pfea_app'
 
     def __str__(self):
-        return "Autor: %s, Titulo: %s, Ano: %s"%(self.Titulo, self.Autor, self.Ano)
+        return "Autor: %s, Titulo: %s, Ano: %s, Cantidad: %s"%(self.Autor, self.Titulo, self.Ano, self.Cantidad)
