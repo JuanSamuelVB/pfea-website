@@ -1,3 +1,3 @@
-from .voluntario import Voluntario
+from .voluntario import SolicitudDeVoluntario
 from .herramienta import Herramienta
 from .libro import Libro

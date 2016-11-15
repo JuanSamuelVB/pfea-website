@@ -1,9 +1,9 @@
 from django.db import models
 
-class Voluntario(models.Model):
+class SolicitudDeVoluntario(models.Model):
     Nombre = models.CharField(max_length=50)
     Apellido = models.CharField(max_length=50)
-    E_mail = models.EmailField()
+    E_mail = models.EmailField(verbose_name='E-mail')
     Celular = models.CharField(max_length=10)
 # NIVELES ACADEMICOS
     Primaria = 1
@@ -16,9 +16,9 @@ class Voluntario(models.Model):
         (Preparatoria, 'Preparatoria'),
         (Universidad, 'Universidad'),
     ]
-    Nivel_academico = models.IntegerField(choices=NIVELES, default=1)
+    Nivel_academico = models.IntegerField(choices=NIVELES,default=1,verbose_name='Nivel académico')
     Escuela = models.CharField(max_length=50, blank=True, null=True)
-    Capacitacion = models.CharField(max_length=50, blank=True, null=True)
+    Capacitacion = models.CharField(max_length=50, blank=True, null=True, verbose_name='Capacitación')
     Matricula = models.CharField(max_length=30, blank=True, null=True)
     Semestre = models.CharField(max_length=50, blank=True, null=True)
 # PROGRAMAS
@@ -35,8 +35,7 @@ class Voluntario(models.Model):
         (Proyecto,'Proyecto de Vinculacion'),
     ]
     Programa = models.IntegerField(choices=PROGRAMAS, default = 1)
-    Horas_realizar = models.IntegerField()
-    Horas_hechas = models.IntegerField()
+    Horas_realizar = models.IntegerField(verbose_name='Horas a realizar')
 # TURNOS
     Matutino = 1
     Vespertino = 2
@@ -47,7 +46,7 @@ class Voluntario(models.Model):
         (Mixto,'Mixto'),
     ]
     Turno = models.IntegerField(choices=TURNOS, default = 1)
-    Fecha_inicio = models.DateField()
+    Fecha_inicio = models.DateField(verbose_name='Fecha de inicio')
     Seguro = models.BooleanField(default=False)
     Contacto_emergencia = models.TextField(max_length = 200, blank=True, null=True)
     Informacion = models.BooleanField(default=True)
