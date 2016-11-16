@@ -12,6 +12,7 @@ from .views.corredores_ecologicos import CorredoresEcologicosView
 from .views.herramientas import HerramientaList
 from .views.libros import LibroList
 from .views.donativos import DonativosView
+from .views.events import Events_View
 
 app_name = 'pfea_app'
 urlpatterns = [
@@ -26,4 +27,5 @@ urlpatterns = [
     url(r'^herramientas/$', HerramientaList.as_view(), name='lista_herramientas'),
     url(r'^libros/$', LibroList.as_view(), name='lista_libros'),
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
+    url(r'^events/$', Events_View.as_view(), name='eventos'),
 ]
