@@ -91,12 +91,10 @@
   <div class="row">
     <!-- Noticias -->
     <div class="col s12 m12 l4">
-      <h5>Noticia 1</h5>
-      <p><a href="#">Ver más</a></p>
-      <h5>Noticia 2</h5>
-      <p><a href="#">Ver más</a></p>
-      <h5>Noticia 3</h5>
-      <p><a href="#">Ver más</a></p>
+      {% for new in news %}
+      <h5>{{ new.title|safe }}</h5>
+      <p><a href="{{ new.link }}">Ver más</a></p>
+      {% endfor %}
     </div>
     <!-- Video -->
     <div class="col s12 m12 l4">

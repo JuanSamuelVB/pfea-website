@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 # or from .views import index
-from .views.index import IndexView
+from .views.index import index
 from .views.mision_vision_principios import MvpView
 from .views.mensaje_direccion import MensajeDireccionView
 from .views.logros import LogrosView
@@ -16,7 +16,7 @@ from .views.events import Events_View
 
 app_name = 'pfea_app'
 urlpatterns = [
-    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^$', index, name='index'),
     url(r'^mision-vision-principios/$', MvpView.as_view(), name='mvp'),
     url(r'^mensaje-de-la-direccion/$', MensajeDireccionView.as_view(), name='mensaje_direccion'),
     url(r'^logros/$', LogrosView.as_view(), name='logros'),
