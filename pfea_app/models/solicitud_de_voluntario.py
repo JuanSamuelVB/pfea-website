@@ -1,6 +1,6 @@
 from django.db import models
 
-class Voluntario(models.Model):
+class SolicitudDeVoluntario(models.Model):
     Nombre = models.CharField(max_length=50)
     Apellido = models.CharField(max_length=50)
     E_mail = models.EmailField(verbose_name='E-mail')
@@ -36,7 +36,6 @@ class Voluntario(models.Model):
     ]
     Programa = models.IntegerField(choices=PROGRAMAS, default = 1)
     Horas_realizar = models.IntegerField(verbose_name='Horas a realizar')
-    Horas_hechas = models.IntegerField()
 # TURNOS
     Matutino = 1
     Vespertino = 2
@@ -53,4 +52,4 @@ class Voluntario(models.Model):
     Informacion = models.BooleanField(default=True)
 
     def __str__(self):
-        return "Voluntario %s, %s Programa = %s"%(self.Nombre, self.Apellido, self.get_Programa_display())
+        return "Solicitud de %s, %s Programa = %s"%(self.Nombre, self.Apellido, self.get_Programa_display())
