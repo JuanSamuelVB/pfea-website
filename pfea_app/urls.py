@@ -11,6 +11,7 @@ from .views.tijuana_waterkeeper import TWaterkeeperView
 from .views.corredores_ecologicos import CorredoresEcologicosView
 from .views.herramientas import HerramientaList
 from .views.libros import LibroList
+from .views.donativos import DonativosView
 
 app_name = 'pfea_app'
 urlpatterns = [
@@ -24,4 +25,5 @@ urlpatterns = [
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
     url(r'^herramientas/$', HerramientaList.as_view(), name='lista_herramientas'),
     url(r'^libros/$', LibroList.as_view(), name='lista_libros'),
+    url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
 ]

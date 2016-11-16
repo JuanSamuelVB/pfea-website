@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container valign-wrapper">
+  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
+  <h1 class="center-block center white-text">Donativos</h1>
+</div>
+
+<!-- Que es -->
+<div class="container">
+  <div class="row section">
+    <h3>PayPal</h3>
+    <div class="row">
+      <div class="col m6">
+        <p>Para hacer un donativo en moneda nacional da clic aquí:</p>
+        <div>
+          <form style="max-height: 70px!important;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /><br />
+           <input name="hosted_button_id" type="hidden" value="XB5N8KFLKRNR6" /><br />
+           <input style="margin-top: -75px!important;" alt="PayPal, la forma más segura y rápida de pagar en línea." name="submit" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" type="image" /><br />
+           <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form>
+        </div>
+      </div>
+      <div class="col m6">
+        <p>To place a donation in USA dollars click here:</p>
+        <div>
+          <form style="max-height: 70px!important;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /><br />
+           <input name="hosted_button_id" type="hidden" value="ZRZ4PGXDZTC6S" /><br />
+           <input style="margin-top: -75px!important;" alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" type="image" /><br />
+           <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0" /></form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row section">
+    <h3>Inbursa</h3>
+    Banco Inbursa, S.A.<br>
+    Proyecto Fronterizo de Educación Ambiental A.C.<br>
+    CLAVE: 036028500118361394<br>
+  </div>
+</div>
+{% endblock %}

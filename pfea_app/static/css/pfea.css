@@ -119,3 +119,17 @@ footer img {
 .mvp-seccion {
     padding: 4em 0 4em 0;
 }
+
+/******************************
+/* Tijuana Waterkeeper
+/******************************/
+
+.swimguide-widget {
+    text-align: center;
+    overflow: hidden;
+}
+
+.swimguide-widget > iframe {
+    margin-left: -100%;
+    margin-right: -100%;
+}
