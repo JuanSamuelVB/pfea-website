@@ -10,9 +10,5 @@ class Libro (models.Model):
     Volumen = models.CharField(max_length=10, blank = True, null=True)
     Cantidad = models.IntegerField(default=1)
 
-    class Meta:
-        db_table = 'libro'
-        app_label = 'pfea_app'
-
     def __str__(self):
         return "Autor: %s, Titulo: %s, Ano: %s, Cantidad: %s"%(self.Autor, self.Titulo, self.Ano, self.Cantidad)
