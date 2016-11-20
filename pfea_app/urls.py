@@ -11,6 +11,7 @@ from .views.tijuana_waterkeeper import TWaterkeeperView
 from .views.corredores_ecologicos import CorredoresEcologicosView
 from .views.herramientas import HerramientaList
 from .views.libros import LibroList
+from .views.registrar_libro import LibroCreate
 from .views.donativos import DonativosView
 from .views.events import Events_View
 
@@ -26,6 +27,7 @@ urlpatterns = [
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
     url(r'^herramientas/$', HerramientaList.as_view(), name='lista_herramientas'),
     url(r'^libros/$', LibroList.as_view(), name='lista_libros'),
+    url(r'^libros/registrar/$', LibroCreate.as_view(), name='registrar_libro'),
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
     url(r'^events/$', Events_View.as_view(), name='eventos'),
 ]
