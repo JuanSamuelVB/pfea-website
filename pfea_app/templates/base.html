@@ -17,7 +17,9 @@
   <body>
 
     {% include 'navbars/navbar.html' %}
+    <div class="main">
     {% block content %}{% endblock %}
+    </div>
     {% include 'footers/footer.html' %}
 
     <script type="text/javascript" src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
