@@ -6,7 +6,7 @@
   <div class="row section">
     <form method="POST">
       {% csrf_token %}
-      <p>¿Seguro que desea borrar {{ object }}</p>
+      <p>¿Seguro que desea borrar el libro {{ object }}?</p>
       <input class="waves-effect waves-light pfea-green btn" type="submit" value="Sí">
       <a class="waves-effect waves-light pfea-green btn" href="{% url 'pfea_app:lista_libros' %}">No</a>
     </form>
