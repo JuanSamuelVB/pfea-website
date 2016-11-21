@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class = 'container'>
+<div class="container">
   <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
 <table class="highlight responsive-table">
   <thead>
@@ -28,9 +28,11 @@
       <td> {{item.Editorial}} </td>
       <td> {{item.Volumen}} </td>
       <td> {{item.Cantidad}} </td>
+      <td><a href="{% url 'pfea_app:borrar_libro' item.pk %}">Borrar</a></td>
     </tbody>
   {% endfor %}
 </table>
+<a class="waves-effect waves-light pfea-green btn" href="{% url 'pfea_app:registrar_libro' %}">Nuevo libro</a>
 </div>
 </div>
 {% endblock %}
