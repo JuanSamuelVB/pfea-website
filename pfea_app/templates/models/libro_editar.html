@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row section">
+    <a href="{% url 'pfea_app:lista_libros' %}">Volver</a>
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input class="waves-effect waves-light pfea-green btn" type="submit" value="Guardar">
+    </form>
+  </div>
+</div>
+{% endblock %}
