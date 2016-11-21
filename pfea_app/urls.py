@@ -13,6 +13,7 @@ from .views.herramientas import HerramientaList
 from .views.libros import LibroList
 from .views.registrar_libro import LibroCreate
 from .views.borrar_libro import LibroDelete
+from .views.editar_libro import LibroUpdate
 from .views.donativos import DonativosView
 from .views.events import Events_View
 
@@ -43,4 +44,5 @@ urlpatterns = [
     url(r'^libros/$', LibroList.as_view(), name='lista_libros'),
     url(r'^libros/registrar/$', LibroCreate.as_view(), name='registrar_libro'),
     url(r'^libros/(?P<pk>\d+)/borrar/$', LibroDelete.as_view(), name='borrar_libro'),
+    url(r'^libros/(?P<pk>\d+)/editar/$', LibroUpdate.as_view(), name='editar_libro'),
 ]

@@ -29,6 +29,7 @@
       <td> {{item.Volumen}} </td>
       <td> {{item.Cantidad}} </td>
       <td><a href="{% url 'pfea_app:borrar_libro' item.pk %}">Borrar</a></td>
+      <td><a href="{% url 'pfea_app:editar_libro' item.pk %}">Editar</a></td>
     </tbody>
   {% endfor %}
 </table>
