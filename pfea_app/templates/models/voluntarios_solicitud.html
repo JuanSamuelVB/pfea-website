@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row section">
+    <div class="col s12">
+
+    <p>Si quieres unirte a nuestro equipo en alguna de estas tres modalidades porfavor llena el siguiente formulario. Todos los campos son obligatorios.</p>
+    <p>Si tienes preguntas o comentarios escríbenos a voluntariado@pfea.org</p>
+
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      <div class="row">
+      <div class="input-field col s12 m6">
+      {{ form.Nombre.errors }}
+      {{ form.Nombre }}
+      {{ form.Nombre.label_tag }}
+      </div>
+
+      <div class="input-field col s12 m6">
+      {{ form.Apellido.errors }}
+      {{ form.Apellido.label_tag }}
+      {{ form.Apellido }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.E_mail.errors }}
+      {{ form.E_mail.label_tag }}
+      {{ form.E_mail }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Celular.errors }}
+      {{ form.Celular.label_tag }}
+      {{ form.Celular }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Nivel_academico.errors }}
+      {{ form.Nivel_academico }}
+      {{ form.Nivel_academico.label_tag }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Escuela.errors }}
+      {{ form.Escuela.label_tag }}
+      {{ form.Escuela }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Capacitacion.errors }}
+      {{ form.Capacitacion.label_tag }}
+      {{ form.Capacitacion }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Matricula.errors }}
+      {{ form.Matricula.label_tag }}
+      {{ form.Matricula }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Semestre.errors }}
+      {{ form.Semestre.label_tag }}
+      {{ form.Semestre }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Programa.errors }}
+      {{ form.Programa }}
+      {{ form.Programa.label_tag }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Horas_realizar.errors }}
+      {{ form.Horas_realizar.label_tag }}
+      {{ form.Horas_realizar }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Turno.errors }}
+      {{ form.Turno }}
+      {{ form.Turno.label_tag }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Fecha_inicio.errors }}
+      {{ form.Fecha_inicio.label_tag }}
+      <input id="{{ form.Fecha_inicio.id_for_label }}" name="{{ form.Fecha_inicio.html_name }}" type="date" class="datepicker" required />
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Seguro.errors }}
+      {{ form.Seguro }}
+      {{ form.Seguro.label_tag }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Contacto_emergencia.errors }}
+      {{ form.Contacto_emergencia.label_tag }}
+      <textarea class="materialize-textarea" cols="40" id="id_Contacto_emergencia" maxlength="200" name="Contacto_emergencia" rows="10"> </textarea>
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      {{ form.Informacion.errors }}
+      {{ form.Informacion }}
+      {{ form.Informacion.label_tag }}
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="input-field col s12">
+      <input class="waves-effect waves-light pfea-green btn" type="submit" value="Enviar">
+      </div>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

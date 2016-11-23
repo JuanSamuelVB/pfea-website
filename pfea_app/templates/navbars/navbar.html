@@ -73,7 +73,7 @@
         <div class="collapsible-body">
           <ul>
             <li><a href="#">Donativos</a></li>
-            <li><a href="#">Voluntarios</a></li>
+            <li><a href="{% url 'pfea_app:voluntarios' %}">Voluntarios</a></li>
           </ul>
         </div>
         </li></ul>
@@ -98,5 +98,5 @@
 
 <ul id="apoyanos-dropdown" class="dropdown-content">
   <li><a href="{% url 'pfea_app:donativos' %}">Donativos</a></li>
-  <li><a href="#">Voluntarios</a></li>
+  <li><a href="{% url 'pfea_app:voluntarios' %}">Voluntarios</a></li>
 </ul>

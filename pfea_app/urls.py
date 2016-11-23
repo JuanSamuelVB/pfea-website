@@ -10,13 +10,14 @@ from .views.reconocimientos_certificaciones import RecYCertView
 from .views.ram import RamView
 from .views.tijuana_waterkeeper import TWaterkeeperView
 from .views.corredores_ecologicos import CorredoresEcologicosView
+from .views.events import Events_View
+from .views.donativos import DonativosView
+from .views.solicitud_voluntarios import SolicitudDeVoluntariosCreate
 from .views.herramientas import HerramientaList
 from .views.libros import LibroList
 from .views.registrar_libro import LibroCreate
 from .views.borrar_libro import LibroDelete
 from .views.editar_libro import LibroUpdate
-from .views.donativos import DonativosView
-from .views.events import Events_View
 
 app_name = 'pfea_app'
 urlpatterns = [
@@ -39,6 +40,7 @@ urlpatterns = [
 
     # Apoyanos
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
+    url(r'^voluntarios/$', SolicitudDeVoluntariosCreate.as_view(), name='voluntarios'),
 
     # Modelos
     url(r'^herramientas/$', HerramientaList.as_view(), name='lista_herramientas'),
