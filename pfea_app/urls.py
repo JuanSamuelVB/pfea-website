@@ -1,4 +1,5 @@
 from django.conf.urls import url
+from django.contrib.auth import views as auth_views
 
 # or from .views import index
 from .views.index import index
@@ -45,4 +46,8 @@ urlpatterns = [
     url(r'^libros/registrar/$', LibroCreate.as_view(), name='registrar_libro'),
     url(r'^libros/(?P<pk>\d+)/borrar/$', LibroDelete.as_view(), name='borrar_libro'),
     url(r'^libros/(?P<pk>\d+)/editar/$', LibroUpdate.as_view(), name='editar_libro'),
+
+    # Autenticacion
+    url(r'^login/$', auth_views.login, { 'template_name' : 'auth/login.html' }, name='login'),
+    url(r'logout/$', auth_views.logout_then_login, name='logout'),
 ]
