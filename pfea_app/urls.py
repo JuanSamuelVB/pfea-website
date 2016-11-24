@@ -14,6 +14,7 @@ from .views.events import Events_View
 from .views.donativos import DonativosView
 from .views.solicitud_voluntarios import SolicitudDeVoluntariosCreate
 from .views.solicitudes import SolicitudDeVoluntariosList
+from .views.solicitud_detalle import SolicitudDeVoluntariosDetail
 from .views.herramientas import HerramientaList
 from .views.libros import LibroList
 from .views.registrar_libro import LibroCreate
@@ -43,6 +44,7 @@ urlpatterns = [
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
     url(r'^voluntarios/$', SolicitudDeVoluntariosCreate.as_view(), name='voluntarios'),
     url(r'^voluntarios/solicitudes/$', SolicitudDeVoluntariosList.as_view(), name='solicitudes'),
+    url(r'^voluntarios/solicitudes/(?P<pk>\d+)/$', SolicitudDeVoluntariosDetail.as_view(), name='solicitud'),
 
     # Modelos
     url(r'^herramientas/$', HerramientaList.as_view(), name='lista_herramientas'),

@@ -27,6 +27,7 @@
     <td>{{ item.Programa }}</td>
     <td>{{ item.Horas_realizar }}</td>
     <td>{{ item.Fecha_inicio }}</td>
+    <td><a href="{% url 'pfea_app:solicitud' item.pk %}">Ver más</a></td>
   </tbody>
   {% endfor %}
 </table>

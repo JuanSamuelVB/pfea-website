@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row section">
+    <h1>Solicitud de {{ object.Nombre }} {{ object.Apellido }}</h1>
+    <p>E-mail: {{ object.E_mail }}</p>
+    <p>Celular: {{ object.Celular }}</p>
+    <p>Nivel académico: {{ object.get_Nivel_academico_display }}</p>
+    <p>Escuela: {{ object.Escuela }}</p>
+    <p>Capacitacion: {{ object.Capacitacion }}</p>
+    <p>Matricula: {{ object.Matricula }}</p>
+    <p>Semestre: {{ object.Semestre }}</p>
+    <p>Programa: {{ object.get_Programa_display }}</p>
+    <p>Horas a realizar: {{ object.Horas_realizar }}</p>
+    <p>Turno: {{ object.get_Turno_display }}</p>
+    <p>Fecha de inicio: {{ object.Fecha_inicio }}</p>
+    <p>Tiene seguro: {% if object.Seguro %} Sí {% else %} No {%endif%}</p>
+    <p>Contacto de emergencia: {{ object.Contacto_emergencia }}</p>
+    <p>Suscrito a informacion sobre programas y proyectos: {% if object.Seguro %} Sí {% else %} No {%endif%}</p>
+  </div>
+</div>
+{% endblock %}
