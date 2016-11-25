@@ -1,56 +1,48 @@
 from django.db import models
 
+NIVELES_ACADEMICOS = [
+    (1, 'Primaria'),
+    (2, 'Secundaria'),
+    (3, 'Preparatoria'),
+    (4, 'Universidad'),
+]
+
+PROGRAMAS = [
+    (1,'Voluntariado'),
+    (2,'Servicio Social 1era Etapa'),
+    (3,'Servicio Social 2da Etapa'),
+    (4,'Practicas Profesionales'),
+    (5,'Proyecto de Vinculacion'),
+]
+
+TURNOS = [
+    (1, 'Matutino'),
+    (2,'Vespertino'),
+    (3,'Mixto'),
+]
+
 class Voluntario(models.Model):
     Nombre = models.CharField(max_length=50)
     Apellido = models.CharField(max_length=50)
     E_mail = models.EmailField(verbose_name='E-mail')
     Celular = models.CharField(max_length=10)
-# NIVELES ACADEMICOS
-    Primaria = 1
-    Secundaria = 2
-    Preparatoria = 3
-    Universidad = 4
-    NIVELES = [
-        (Primaria, 'Primaria'),
-        (Secundaria, 'Secundaria'),
-        (Preparatoria, 'Preparatoria'),
-        (Universidad, 'Universidad'),
-    ]
-    Nivel_academico = models.IntegerField(choices=NIVELES,default=1,verbose_name='Nivel académico')
+    Nivel_academico = models.IntegerField(choices=NIVELES_ACADEMICOS,default=1,verbose_name='Nivel académico')
     Escuela = models.CharField(max_length=50, blank=True, null=True)
     Capacitacion = models.CharField(max_length=50, blank=True, null=True, verbose_name='Capacitación')
     Matricula = models.CharField(max_length=30, blank=True, null=True)
     Semestre = models.CharField(max_length=50, blank=True, null=True)
-# PROGRAMAS
-    Voluntariado = 1
-    Servicio_social1 = 2
-    Servicio_social2 = 3
-    Practicas = 4
-    Proyecto = 5
-    PROGRAMAS = [
-        (Voluntariado,'Voluntariado'),
-        (Servicio_social1,'Servicio Social 1era Etapa'),
-        (Servicio_social2,'Servicio Social 2da Etapa'),
-        (Practicas,'Practicas Profesionales'),
-        (Proyecto,'Proyecto de Vinculacion'),
-    ]
-    Programa = models.IntegerField(choices=PROGRAMAS, default = 1)
+    Programa = models.IntegerField(choices=PROGRAMAS, default=1)
     Horas_realizar = models.IntegerField(verbose_name='Horas a realizar')
-    Horas_hechas = models.IntegerField()
-# TURNOS
-    Matutino = 1
-    Vespertino = 2
-    Mixto = 3
-    TURNOS = [
-        (Matutino, 'Matutino'),
-        (Vespertino,'Vespertino'),
-        (Mixto,'Mixto'),
-    ]
-    Turno = models.IntegerField(choices=TURNOS, default = 1)
+    Horas_hechas = models.IntegerField(blank=True, null=True)
+    Turno = models.IntegerField(choices=TURNOS, default=1)
     Fecha_inicio = models.DateField(verbose_name='Fecha de inicio')
     Seguro = models.BooleanField(default=False)
-    Contacto_emergencia = models.TextField(max_length = 200, blank=True, null=True)
+    Contacto_emergencia = models.TextField(max_length=200, blank=True, null=True)
     Informacion = models.BooleanField(default=True)
+    Solicitud_aceptada = models.BooleanField(default=False, blank=True)
 
     def __str__(self):
-        return "Voluntario %s, %s Programa = %s"%(self.Nombre, self.Apellido, self.get_Programa_display())
+        if self.Solicitud_aceptada:
+            return "%s %s" % (self.Nombre, self.Apellido)
+        else:
+            return "Solicitud de %s %s" % (self.Nombre, self.Apellido)
