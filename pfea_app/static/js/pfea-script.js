@@ -1,6 +1,12 @@
 $(document).ready(function(){
 	$('select').material_select();
-	$('#calendar').fullCalendar();
+	$('#calendar').fullCalendar({
+		header: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'month,listYear'
+		},
+	});
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
 	$('.dropdown-button').dropdown({
