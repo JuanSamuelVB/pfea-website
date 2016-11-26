@@ -6,6 +6,10 @@ $(document).ready(function(){
 			center: 'title',
 			right: 'month,listYear'
 		},
+		googleCalendarApiKey: 'AIzaSyCID6HksHlVeF0MHr1Mw9lEjGNx-rr9Pbw',
+		events: {
+			googleCalendarId: '0l8dfn8l0c50p38sqc427nfvlk@group.calendar.google.com'
+		}
 	});
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
