@@ -29,6 +29,7 @@
     <td>{{ item.Fecha_inicio }}</td>
     <td><a href="{% url 'pfea_app:solicitud' item.pk %}">Ver más</a></td>
     <td><a href="{% url 'pfea_app:borrar_solicitud' item.pk %}">Borrar</a></td>
+    <td><a href="{% url 'pfea_app:aceptar_solicitud' item.pk %}">Aceptar</a></td>
   </tbody>
   {% endfor %}
 </table>

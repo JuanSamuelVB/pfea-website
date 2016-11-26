@@ -5,4 +5,4 @@ from pfea_app.models import Voluntario
 
 class SolicitudDeVoluntariosList(ListView):
     template_name = 'models/voluntarios_solicitudes.html'
-    model = Voluntario
+    queryset = Voluntario.objects.filter(Solicitud_aceptada=False)
