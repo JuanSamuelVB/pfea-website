@@ -41,7 +41,7 @@ urlpatterns = [
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
     
     # Eventos
-    url(r'^events/$', Events_View.as_view(), name='eventos'),
+    url(r'^eventos/$', Events_View.as_view(), name='eventos'),
 
     # Apoyanos
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
