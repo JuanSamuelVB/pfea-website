@@ -1,0 +1,15 @@
+nav.pfea-blue {
+    background-color: #0054a6 !important;
+}
+
+nav.pfea-blue a{
+    color: #ffffff;
+}
+
+nav.pfea-white {
+    background-color: #ffffff !important;
+}
+
+nav.pfea-white a {
+    color: #0054a6;
+}
