@@ -4,10 +4,23 @@
 
 {% block content %}
 
-<div class="parallax-container custom">
-    <div class="parallax-title left-align pfea-orange">
-        <p>Misión</p>
+<div class="parallax-container custom no-margin">
+    <div class="parallax-content">
+        <div class="parallax"><img src="{% static 'images/test-image.jpg' %}"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="text-container small valign-wrapper">
+                        <h3 class="center-block center">Misión, Visión y Principios</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="parallax-title left-align pfea-green"></div>
+</div>
+
+<div class="parallax-container custom">
     <div class="parallax-content">
         <div class="parallax"><img src="{% static 'images/test-image.jpg' %}"></div>
         <div class="container">
@@ -15,26 +28,24 @@
                 <div class="col s12 m6 l6"></div>
                 <div class="col s12 m6 l6">
                     <div class="text-container medium">
-                        <p class="title">Nuestra misión consiste en...</p>
+                        <p class="title">Misión</p>
                         <p class="content">Trabajar para proteger el océano, arroyos y costas de nuestra cuenca.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="parallax-title left-align pfea-orange"></div>
 </div>
 
 <div class="parallax-container custom">
-    <div class="parallax-title right-align pfea-green">
-        <p>Visión</p>
-    </div>
     <div class="parallax-content">
         <div class="parallax"><img src="{% static 'images/test-image.jpg' %}"></div>
         <div class="container">
             <div class="row">
                 <div class="col s12 m6 l6">
                     <div class="text-container medium">
-                        <p class="title">Nuestra visión consiste en...</p>
+                        <p class="title">Visión</p>
                         <p class="content">Una cuenca costera conectada por ríos vivos y protegida por una comunidad que participa en el rescate de su patrimonio hídrico.</p>
                     </div>
                 </div>
@@ -42,6 +53,7 @@
             </div>
         </div>
     </div>
+    <div class="parallax-title right-align pfea-green"></div>
 </div>
 
 <div class="parallax-container custom">
@@ -87,6 +99,7 @@
             </div>
         </div>
     </div>
+    <div class="parallax-title right-align pfea-blue"></div>
 </div>
 
 {% endblock %}
