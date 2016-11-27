@@ -1,19 +1,35 @@
 .pfea-white {
     background-color: #ffffff !important;
-    color: #222222;
+    color: #222222 !important;
+}
+
+.pfea-white-text {
+    color: #ffffff !important;
 }
 
 .pfea-blue {
     background-color: #0054a6 !important;
-    color: #eeeeee;
+    color: #eeeeee !important;
+}
+
+.pfea-blue-text {
+    color: #0054a6 !important;
 }
 
 .pfea-green {
     background-color: #559e50 !important;
-    color: #eeeeee;
+    color: #eeeeee !important;
+}
+
+.pfea-green-text {
+    color: #559e50 !important;
 }
 
 .pfea-orange {
     background-color: #f36f21 !important;
-    color: #eeeeee;
+    color: #eeeeee !important;
+}
+
+.pfea-orange-text {
+    color: #f36f21 !important;
 }
