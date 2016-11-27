@@ -1,0 +1,15 @@
+.statistics-widget {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    z-index: 1;
+}
+
+.swimguide-widget {
+    text-align: center;
+    overflow: hidden;
+}
+
+.swimguide-widget > iframe {
+    margin-left: -100%;
+    margin-right: -100%;
+}
