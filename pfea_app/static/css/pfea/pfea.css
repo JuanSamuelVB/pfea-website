@@ -4,103 +4,23 @@ body {
     flex-direction: column;
 }
 
-.no-margin {
-    margin: 0 !important;
-}
-
-/* Footer */
-
-footer.page-footer {
-    margin-top: -6px;
-}
-
-footer img {
-    width: 100%;
-    max-width: 300px;
-}
-
-/* Sticky Footer */
-
 .main {
     flex: 1 0 auto;
 }
 
-/******************************
-/* Inicio
-/******************************/
-
-/* Programas */
-
-.programa-hp {
-    padding: 1em;
+.default-margin {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-@media (min-width: 993px) {
-    .programa-hp {
-        min-height: 400px;
-    }
+.no-margin {
+    margin: 0 !important;
 }
 
-.programas {
-    margin-bottom: 0;
+.default-padding {
+    padding: 40px 30px;
 }
 
-/* Estadisticas */
-
-.estadisticas-parallax {
-    height: auto;
-}
-
-.estadisticas {
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-    z-index: 1;
-}
-
-.estadisticas h4 {
+.text-bold {
     font-weight: bold;
-}
-
-.estadisticas-overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    background-color: rgba(0, 0, 50, 0.4);
-}
-
-/* Suscripcion */
-
-.suscripcion {
-    padding: 3em;
-}
-
-.suscripcion input[type='text'] {
-    max-width: 500px;
-}
-
-.suscripcion div.col {
-    margin-bottom: 1em;
-}
-
-/******************************
-/* Mision, vision y principios
-/******************************/
-
-.mvp-seccion {
-    padding: 4em 0 4em 0;
-}
-
-/******************************
-/* Tijuana Waterkeeper
-/******************************/
-
-.swimguide-widget {
-    text-align: center;
-    overflow: hidden;
-}
-
-.swimguide-widget > iframe {
-    margin-left: -100%;
-    margin-right: -100%;
 }
