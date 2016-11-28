@@ -1,5 +1,5 @@
-dj-database-url==0.4.1
 Django==1.10
+dj-database-url==0.4.1
 ez-setup==0.9
 feedparser==5.2.1
 gunicorn==19.6.0
