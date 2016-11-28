@@ -15,12 +15,12 @@ def index(request):
     for entry in last_three_entries:
         entry_dict = {}
 
-        google_link = entry.link
-        parsed = urlparse.parse_qs(urlparse.urlparse(google_link).query)
-        link = parsed['url'][0]
+        # google_link = entry.link
+        # parsed = urlparse.parse_qs(urlparse.urlparse(google_li4nk).query)
+        # link = parsed['url'][0]
 
         entry_dict['title'] = entry.title
-        entry_dict['link'] = link
-        context['news'].append(entry_dict)
+        entry_dict['link'] = entry.link
+        context['entry'].append(entry_dict)
 
     return render(request, 'home/index.html', context)
