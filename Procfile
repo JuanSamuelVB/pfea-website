@@ -1,1 +1,1 @@
-web: gunicorn PFEA.wsgi --log-file -
+web: python app.py
