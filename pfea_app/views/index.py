@@ -21,6 +21,6 @@ def index(request):
 
         entry_dict['title'] = entry.title
         entry_dict['link'] = entry.link
-        context['entry'].append(entry_dict)
+        context['news'].append(entry_dict)
 
     return render(request, 'home/index.html', context)
