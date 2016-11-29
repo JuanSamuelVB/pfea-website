@@ -81,7 +81,7 @@ DATABASES = {
         'USER': 'pfeadmin',
         'PASSWORD': 'pfeapfea',
         'HOST':'localhost',
-        'PORT':'',
+        'PORT':'5432',
     }
 }
 
