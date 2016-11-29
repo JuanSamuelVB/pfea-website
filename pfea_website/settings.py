@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'pfea_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PFEA_DB',
-        'USER': 'Admin',
-        'PASSWORD': 'pfeakey',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pfea',
+        'USER': 'pfeadmin',
+        'PASSWORD': 'pfeapfea',
         'HOST':'localhost',
         'PORT':'',
     }
