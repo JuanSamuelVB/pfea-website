@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container center-block center default-margin default-padding">
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <img src="{% static 'images/dolphin-not-found.png' %}">
+        </div>
+        <div class="col s12 m6 l6">
+            <h2>Dolphin not found</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <a class="waves-effect waves-light btn-large pfea-green" href="{% url 'pfea_app:index' %}">Go to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

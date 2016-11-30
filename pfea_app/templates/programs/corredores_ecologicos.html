@@ -1,35 +1,37 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
 <!-- Parallax -->
-<div class="parallax-container valign-wrapper">
-  <div class="parallax"><img src="{% static 'images/page-title-background.jpg' %}"></div>
-  <div class="container white-text center">
-    <div class="row">
-      <h1 class="center-block">Corredores ecológicos transfronterizos</h1>
+<div class="parallax-container custom no-margin">
+    <div class="parallax-content">
+        <div class="parallax"><img src="{% static 'images/test-image.jpg' %}"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="text-container small valign-wrapper">
+                        <h3 class="center-block center">Corredores ecológicos transfronterizos</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <p>Trabajamos para proteger las áreas naturales y espacios abiertos interconectados que brindan servicios ambientales al a cuenca del Río Tijuana en su naturaleza binacional, por sus beneficios para la comunidad y los ecosistemas</p>
-    </div>
-  </div>
+    <div class="parallax-title left-align pfea-green"></div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col m12 center">
-      <h4>Proyectos</h4>
-      <p>Arroyo Alamar</p>
-      <p>Parque de Conservación Cañada de los Sauces</p>
+<div class="container default-margin">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h5 class="center">Trabajamos para proteger las áreas naturales y espacios abiertos interconectados que brindan servicios ambientales al a cuenca del Río Tijuana en su naturaleza binacional, por sus beneficios para la comunidad y los ecosistemas</h5>
+        </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col m12 center">
+            <h4>Proyectos</h4>
+            <p>Arroyo Alamar</p>
+            <p>Parque de Conservación Cañada de los Sauces</p>
+        </div>
+    </div>
 </div>
-{% endblock %}
-
-{% block javascript %}
-<script>
-  $(document).ready(function(){
-    $('.parallax').parallax();
-  });
-</script>
 {% endblock %}

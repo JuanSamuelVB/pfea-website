@@ -1,3 +1,11 @@
 .material-icons.smaller {
     font-size: smaller;
 }
+
+.material-icons.small {
+    font-size: small;
+}
+
+.material-icons.medium {
+    font-size: medium;
+}
