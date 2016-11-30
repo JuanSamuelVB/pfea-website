@@ -8,7 +8,6 @@ class Herramienta(models.Model):
     Descripcion = models.CharField(max_length=200, null=True, blank=True)
     Cantidad = models.IntegerField(default=0)
     Codigo = models.CharField(max_length=20, default=0)
-    Inventario = models.ForeignKey('InventarioDeHerramientas', on_delete=models.CASCADE)
 
     def __str__(self):
         return "Articulo :%s, Codigo: %s, Cantidad: %s"%(self.Concepto, self.Codigo, self.Cantidad)
