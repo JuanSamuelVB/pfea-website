@@ -27,9 +27,12 @@
     <td> {{item.Descripcion}}</td>
     <td> {{item.Cantidad}}</td>
     <td> {{item.Codigo}}</td>
+    <td><a href="{% url 'pfea_app:borrar_herramienta' item.pk %}">Borrar</a></td>
+    <td><a href="{% url 'pfea_app:editar_herramienta' item.pk %}">Editar</a></td>
   </tbody>
   {% endfor %}
 </table>
+<a class="waves-effect waves-light pfea-green btn" href="{% url 'pfea_app:registrar_herramienta' %}">Nueva herramienta</a>
 </div>
 </div>
 </div>

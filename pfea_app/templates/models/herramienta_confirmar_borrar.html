@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <div class="row section">
+    <form method="POST">
+      {% csrf_token %}
+      <p>¿Seguro que desea borrar el registro de la herramienta {{ object }}?</p>
+      <input class="waves-effect waves-light pfea-green btn" type="submit" value="Sí">
+      <a class="waves-effect waves-light pfea-green btn" href="{% url 'pfea_app:lista_herramientas' %}">No</a>
+    </form>
+  </div>
+</div>
+{% endblock %}
