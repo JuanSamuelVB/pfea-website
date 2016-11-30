@@ -25,6 +25,14 @@
           <i class="material-icons right">arrow_drop_down</i>
         </a>
       </li>
+      {% if user.is_authenticated %}
+      <li>
+        <a class="dropdown-button" data-beloworigin="true" href="#" data-activates="admin-dropdown">
+          Admin
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </li>
+      {% endif %}
     </ul>
 
     <!-- SideNav -->
@@ -72,12 +80,31 @@
         </a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="#">Donativos</a></li>
+            <li><a href="{% url 'pfea_app:donativos' %}">Donativos</a></li>
             <li><a href="{% url 'pfea_app:voluntarios' %}">Voluntarios</a></li>
           </ul>
         </div>
         </li></ul>
       </li>
+      {% if user.is_authenticated %}
+      <!-- Admin -->
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion"><li>
+        <a class="collapsible-header">
+          Apóyanos
+        </a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="{% url 'pfea_app:solicitudes' %}">Solicitudes</a></li>
+            <li><a href="{% url 'pfea_app:lista_voluntarios' %}">Voluntarios</a></li>
+            <li><a href="{% url 'pfea_app:lista_libros' %}">Libros</a></li>
+            <li><a href="{% url 'pfea_app:lista_herramientas' %}">Herramientas</a></li>
+            <li><a href="{% url 'pfea_app:logout' %}">Salir</a></li>
+          </ul>
+        </div>
+        </li></ul>
+      </li>
+      {% endif %}
     </ul>
 
   </div>
@@ -100,3 +127,13 @@
   <li><a href="{% url 'pfea_app:donativos' %}">Donativos</a></li>
   <li><a href="{% url 'pfea_app:voluntarios' %}">Voluntarios</a></li>
 </ul>
+
+{% if user.is_authenticated %}
+<ul id="admin-dropdown" class="dropdown-content">
+  <li><a href="{% url 'pfea_app:solicitudes' %}">Solicitudes</a></li>
+  <li><a href="{% url 'pfea_app:lista_voluntarios' %}">Voluntarios</a></li>
+  <li><a href="{% url 'pfea_app:lista_libros' %}">Libros</a></li>
+  <li><a href="{% url 'pfea_app:lista_herramientas' %}">Herramientas</a></li>
+  <li><a href="{% url 'pfea_app:logout' %}">Salir</a></li>
+</ul>
+{% endif %}
