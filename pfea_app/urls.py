@@ -12,6 +12,7 @@ from .views.tijuana_waterkeeper import TWaterkeeperView
 from .views.corredores_ecologicos import CorredoresEcologicosView
 from .views.events import Events_View
 from .views.donativos import DonativosView
+from .views.voluntarios import VoluntarioList
 from .views.solicitud_voluntarios import SolicitudDeVoluntariosCreate
 from .views.solicitudes import SolicitudDeVoluntariosList
 from .views.solicitud_detalle import SolicitudDeVoluntariosDetail
@@ -39,7 +40,7 @@ urlpatterns = [
     url(r'^ram/$', RamView.as_view(), name='ram'),
     url(r'^tijuana-waterkeeper/$', TWaterkeeperView.as_view(), name='t_waterkeeper'),
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
-    
+
     # Eventos
     url(r'^eventos/$', Events_View.as_view(), name='eventos'),
 
@@ -47,6 +48,7 @@ urlpatterns = [
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
     url(r'^voluntarios/$', SolicitudDeVoluntariosCreate.as_view(), name='voluntarios'),
     url(r'^voluntarios/solicitudes/$', SolicitudDeVoluntariosList.as_view(), name='solicitudes'),
+    url(r'^voluntarios/lista/$', VoluntarioList.as_view(), name='lista_voluntarios'),
     url(r'^voluntarios/solicitudes/(?P<pk>\d+)/$', SolicitudDeVoluntariosDetail.as_view(), name='solicitud'),
     url(r'^voluntarios/solicitudes/(?P<pk>\d+)/borrar/$', SolicitudDeVoluntariosDelete.as_view(), name='borrar_solicitud'),
     url(r'^voluntarios/solicitudes/(?P<pk>\d+)/aceptar/$', solicitud_aceptar, name='aceptar_solicitud'),

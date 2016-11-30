@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+    <div class="col s12">
+<table class="centered highlight responsive-table">
+  <thead>
+    <tr>
+      <th data-field="">Nombre</th>
+      <th data-field="">E-mail</th>
+      <th data-field="">Celular</th>
+      <th data-field="">Escuela</th>
+      <th data-field="">Programa</th>
+      <th data-field="">Horas a realizar</th>
+      <th data-field="">Fecha de inicio</th>
+    <tr>
+  </thead>
+  {% for item in object_list %}
+  <tbody>
+    <td>{{ item.Nombre }} {{ item.Apellido }}</td>
+    <td>{{ item.E_mail }}</td>
+    <td>{{ item.Celular }}</td>
+    <td>{{ item.Escuela }} ({{ item.Nivel_academico }})</td>
+    <td>{{ item.Programa }}</td>
+    <td>{{ item.Horas_realizar }}</td>
+    <td>{{ item.Fecha_inicio }}</td>
+    <td><a href="{% url 'pfea_app:solicitud' item.pk %}">Ver más</a></td>
+  </tbody>
+  {% endfor %}
+</table>
+</div>
+</div>
+</div>
+{% endblock %}
