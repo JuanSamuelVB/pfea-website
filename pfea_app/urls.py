@@ -39,7 +39,7 @@ urlpatterns = [
     url(r'^ram/$', RamView.as_view(), name='ram'),
     url(r'^tijuana-waterkeeper/$', TWaterkeeperView.as_view(), name='t_waterkeeper'),
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
-    
+
     # Eventos
     url(r'^eventos/$', Events_View.as_view(), name='eventos'),
 
