@@ -24,3 +24,8 @@ body {
 .text-bold {
     font-weight: bold;
 }
+
+.text-justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
