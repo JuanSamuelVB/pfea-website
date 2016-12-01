@@ -2,8 +2,6 @@ from django.contrib import admin
 from .models import (Herramienta, Libro,
     Voluntario, BasuraRecogida)#, InventarioDeHerramientas
 
-# Deprecated, InventarioDeHerramientas
-
 # Register your models here.
 admin.site.register(Herramienta)
 #admin.site.register(InventarioDeHerramientas)
