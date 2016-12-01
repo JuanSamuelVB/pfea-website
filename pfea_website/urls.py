@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+handler404 = 'pfea_app.views.handler404'
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('pfea_app.urls')),
