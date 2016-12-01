@@ -1,32 +1,14 @@
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 
-# or from .views import index
-from .views.index import index
-from .views.mision_vision_principios import MvpView
-from .views.mensaje_direccion import MensajeDireccionView
-from .views.logros import LogrosView
-from .views.reconocimientos_certificaciones import RecYCertView
-from .views.ram import RamView
-from .views.tijuana_waterkeeper import TWaterkeeperView
-from .views.corredores_ecologicos import CorredoresEcologicosView
-from .views.events import Events_View
-from .views.donativos import DonativosView
-from .views.voluntarios import VoluntarioList
-from .views.solicitud_voluntarios import SolicitudDeVoluntariosCreate
-from .views.solicitudes import SolicitudDeVoluntariosList
-from .views.solicitud_detalle import SolicitudDeVoluntariosDetail
-from .views.solicitud_borrar import SolicitudDeVoluntariosDelete
-from .views.solicitud_aceptar import solicitud_aceptar
-from .views.gracias import GraciasView
-from .views.herramientas import HerramientaList
-from .views.registrar_herramienta import HerramientaCreate
-from .views.borrar_herramienta import HerramientaDelete
-from .views.editar_herramienta import HerramientaUpdate
-from .views.libros import LibroList
-from .views.registrar_libro import LibroCreate
-from .views.borrar_libro import LibroDelete
-from .views.editar_libro import LibroUpdate
+from .views import (index, MvpView, MensajeDireccionView, LogrosView, 
+    RecYCertView, RamView, TWaterkeeperView, CorredoresEcologicosView, 
+    Events_View, DonativosView, VoluntarioList, 
+    SolicitudDeVoluntariosCreate, SolicitudDeVoluntariosList, 
+    SolicitudDeVoluntariosDetail, SolicitudDeVoluntariosDelete, 
+    solicitud_aceptar, GraciasView, HerramientaList, HerramientaCreate, 
+    HerramientaDelete, HerramientaUpdate, LibroList, LibroCreate, 
+    LibroDelete, LibroUpdate)
 
 app_name = 'pfea_app'
 urlpatterns = [
