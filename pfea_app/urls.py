@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 
 from .views import (index, MvpView, MensajeDireccionView, LogrosView, 
-    RecYCertView, RamView, TWaterkeeperView, CorredoresEcologicosView, 
+    RecYCertView, RamView, TWaterkeeperView, CorredoresEcologicosView, SalvemosLaPlayaView,
     Events_View, DonativosView, VoluntarioList, 
     SolicitudDeVoluntariosCreate, SolicitudDeVoluntariosList, 
     SolicitudDeVoluntariosDetail, SolicitudDeVoluntariosDelete, 
@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^ram/$', RamView.as_view(), name='ram'),
     url(r'^tijuana-waterkeeper/$', TWaterkeeperView.as_view(), name='t_waterkeeper'),
     url(r'^corredores-ecologicos-transfronterizos/$', CorredoresEcologicosView.as_view(), name='corredores'),
+    url(r'^salvemos-la-playa/$', SalvemosLaPlayaView.as_view(), name='salvemos_playa'),
 
     # Eventos
     url(r'^eventos/$', Events_View.as_view(), name='eventos'),
