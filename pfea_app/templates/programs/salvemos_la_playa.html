@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Parallax -->
+<div class="parallax-container custom no-margin">
+    <div class="parallax-content">
+        <div class="parallax"><img src="{% static 'images/salvemos-la-playa.jpg' %}"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="text-container small valign-wrapper">
+                        <h3 class="center-block center">Salvemos la Playa</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-title left-align pfea-blue"></div>
+</div>
+
+<!-- Que es -->
+<div class="container default-margin">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h3>¿Qué es?</h3>
+            <div class="divider"></div>
+            <br>
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    <div class="row">
+                        <img class="logo mid" src="{% static 'images/SLP-logo.png' %}">
+                    </div>
+                </div>
+                <div class="col s12 m8 l8">
+                    <div class="row">
+                        <h4>Salvemos la Playa</h4>
+                    </div>
+                    <div class="row">
+                        <h5>Limpiamos nuestras playas con la ayuda de cualquier persona que desee ayudar a mantener nuestras constas libres de basura, ya sean jovenes o adultos.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container default-margin default-padding">
+    <div class="row center">
+        <div class="col s12 m12 l12">
+            <img src="{% static 'images/SLP_FB-01-1.jpg' %}" style="width: 100%;">
+        </div>
+    </div>
+</div>
+{% endblock %}

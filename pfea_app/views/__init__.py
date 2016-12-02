@@ -8,6 +8,7 @@ from .reconocimientos_certificaciones import RecYCertView
 from .ram import RamView
 from .tijuana_waterkeeper import TWaterkeeperView
 from .corredores_ecologicos import CorredoresEcologicosView
+from .salvemos_la_playa import SalvemosLaPlayaView
 
 from .events import Events_View
 
