@@ -6,7 +6,7 @@ class Libro (models.Model):
     Titulo = models.CharField(max_length = 200)
     Edicion = models.CharField(max_length = 20)
     Publicacion = models.CharField(max_length = 40)
-    Editorial = models.CharField(max_length = 50)
+    Editorial = models.CharField(max_length = 100)
     Volumen = models.CharField(max_length=10, blank = True, null=True)
     Cantidad = models.IntegerField(default=1)
 
