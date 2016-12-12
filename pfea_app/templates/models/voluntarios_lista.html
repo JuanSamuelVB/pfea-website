@@ -5,7 +5,11 @@
 
 <div class="container">
   <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2>Voluntarios</h2>
+  </div>
+  <div class="row">
     <div class="col s12">
+
 <table class="centered highlight responsive-table">
   <thead>
     <tr>
@@ -18,20 +22,29 @@
       <th data-field="">Fecha de inicio</th>
     <tr>
   </thead>
+  {% if object_list %}
   {% for item in object_list %}
   <tbody>
-    <td>{{ item.Nombre }} {{ item.Apellido }}</td>
-    <td>{{ item.E_mail }}</td>
-    <td>{{ item.Celular }}</td>
-    <td>{{ item.Escuela }} ({{ item.Nivel_academico }})</td>
-    <td>{{ item.Programa }}</td>
-    <td>{{ item.Horas_realizar }}</td>
-    <td>{{ item.Fecha_inicio }}</td>
-    <td><a href="{% url 'pfea_app:solicitud' item.pk %}">Ver más</a></td>
+    <tr>
+      <td>{{ item.Nombre }} {{ item.Apellido }}</td>
+      <td>{{ item.E_mail }}</td>
+      <td>{{ item.Celular }}</td>
+      <td>{{ item.Escuela }} ({{ item.Nivel_academico }})</td>
+      <td>{{ item.Programa }}</td>
+      <td>{{ item.Horas_realizar }}</td>
+      <td>{{ item.Fecha_inicio }}</td>
+      <td><a href="{% url 'pfea_app:solicitud' item.pk %}">Ver más</a></td>
+    </tr>
   </tbody>
   {% endfor %}
+  {% else %}
+    <tr>
+      <td colspan="7"> No hay voluntarios </td>
+    </tr>
+  {% endif %}
 </table>
-</div>
-</div>
+
+    </div>
+  </div>
 </div>
 {% endblock %}
