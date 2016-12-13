@@ -32,6 +32,9 @@ from .borrar_libro import LibroDelete
 from .editar_libro import LibroUpdate
 
 from .nuevo_mensaje import nuevo_mensaje
+from .mensajes import MensajeList
+from .borrar_mensaje import MensajeDelete
+
 from .gracias import GraciasView
 
 from .error404 import handler404
