@@ -5,6 +5,11 @@
 
 <div class="container">
   <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2>Libros</h2>
+  </div>
+  <div class="row">
+    <div class="col s12">
+
 <table class="highlight responsive-table">
   <thead>
     <tr>
@@ -18,8 +23,10 @@
       <th data-field="cantidad">Cantidad</th>
     <tr>
   </thead>
+  <tbody>
+  {% if object_list %}
   {% for item in object_list %}
-    <tbody>
+    <tr>
       <td> {{item.Autor}} </td>
       <td> {{item.Ano}} </td>
       <td> {{item.Titulo}} </td>
@@ -30,10 +37,20 @@
       <td> {{item.Cantidad}} </td>
       <td><a href="{% url 'pfea_app:borrar_libro' item.pk %}">Borrar</a></td>
       <td><a href="{% url 'pfea_app:editar_libro' item.pk %}">Editar</a></td>
-    </tbody>
+    </tr>
   {% endfor %}
+  {% else %}
+    <tr>
+      <td colspan="8"> No hay libros </td>
+    </tr>
+  {% endif %}
+  </tbody>
 </table>
-<a class="waves-effect waves-light pfea-green btn" href="{% url 'pfea_app:registrar_libro' %}">Nuevo libro</a>
-</div>
+
+    </div>
+  </div>
+  <div class="row">
+    <a class="waves-effect waves-light pfea-green btn right" href="{% url 'pfea_app:registrar_libro' %}">Nuevo libro</a>
+  </div>
 </div>
 {% endblock %}

@@ -5,7 +5,11 @@
 
 <div class="container">
   <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2>Herramientas</h2>
+  </div>
+  <div class="row">
     <div class="col s12">
+
 <table class="centered highlight responsive-table">
   <thead>
     <tr>
@@ -18,22 +22,33 @@
       <th data-field="">Codigo</th>
     <tr>
   </thead>
-  {% for item in object_list %}
   <tbody>
-    <td> {{item.Concepto}}</td>
-    <td> {{item.Marca}}</td>
-    <td> {{item.Modelo}}</td>
-    <td> {{item.Numero_Serie}}</td>
-    <td> {{item.Descripcion}}</td>
-    <td> {{item.Cantidad}}</td>
-    <td> {{item.Codigo}}</td>
-    <td><a href="{% url 'pfea_app:borrar_herramienta' item.pk %}">Borrar</a></td>
-    <td><a href="{% url 'pfea_app:editar_herramienta' item.pk %}">Editar</a></td>
-  </tbody>
+  {% if object_list %}
+  {% for item in object_list %}
+    <tr>
+      <td> {{item.Concepto}}</td>
+      <td> {{item.Marca}}</td>
+      <td> {{item.Modelo}}</td>
+      <td> {{item.Numero_Serie}}</td>
+      <td> {{item.Descripcion}}</td>
+      <td> {{item.Cantidad}}</td>
+      <td> {{item.Codigo}}</td>
+      <td><a href="{% url 'pfea_app:borrar_herramienta' item.pk %}">Borrar</a></td>
+      <td><a href="{% url 'pfea_app:editar_herramienta' item.pk %}">Editar</a></td>
+    </tr>
   {% endfor %}
+  {% else %}
+    <tr>
+      <td colspan="7"> No hay herramientas </td>
+    </tr>
+  {% endif %}
+  </tbody>
 </table>
-<a class="waves-effect waves-light pfea-green btn" href="{% url 'pfea_app:registrar_herramienta' %}">Nueva herramienta</a>
-</div>
-</div>
+
+    </div>
+  </div>
+  <div class="row">
+    <a class="waves-effect waves-light pfea-green btn right" href="{% url 'pfea_app:registrar_herramienta' %}">Nueva herramienta</a>
+  </div>
 </div>
 {% endblock %}
