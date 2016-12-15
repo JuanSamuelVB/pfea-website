@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2>Mensajes</h2>
+  </div>
+  <div class="row">
+
+{% if object_list %}
+  {% for mensaje in object_list %}
+  <div class="col m6 s12">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ mensaje }}</span>
+        <p><strong>Email</strong>: {{ mensaje.correo_electronico }}</p>
+        <p>{{ mensaje.mensaje }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'pfea_app:borrar_mensaje' mensaje.pk %}">Borrar</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% else %}
+  <p>No hay mensajes</p>
+{% endif %}
+
+  </div>
+</div>
+{% endblock %}

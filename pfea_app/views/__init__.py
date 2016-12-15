@@ -20,7 +20,6 @@ from .solicitudes import SolicitudDeVoluntariosList
 from .solicitud_detalle import SolicitudDeVoluntariosDetail
 from .solicitud_borrar import SolicitudDeVoluntariosDelete
 from .solicitud_aceptar import solicitud_aceptar
-from .gracias import GraciasView
 
 from .herramientas import HerramientaList
 from .registrar_herramienta import HerramientaCreate
@@ -31,5 +30,11 @@ from .libros import LibroList
 from .registrar_libro import LibroCreate
 from .borrar_libro import LibroDelete
 from .editar_libro import LibroUpdate
+
+from .nuevo_mensaje import nuevo_mensaje
+from .mensajes import MensajeList
+from .borrar_mensaje import MensajeDelete
+
+from .gracias import GraciasView
 
 from .error404 import handler404

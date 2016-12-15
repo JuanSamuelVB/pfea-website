@@ -5,3 +5,4 @@ from .herramienta import Herramienta
 
 from .libro import Libro
 from .basura_recogida import BasuraRecogida
+from .mensaje import Mensaje

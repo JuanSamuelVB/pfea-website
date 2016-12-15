@@ -8,7 +8,7 @@ from .views import (index, MvpView, MensajeDireccionView, LogrosView,
     SolicitudDeVoluntariosDetail, SolicitudDeVoluntariosDelete, 
     solicitud_aceptar, GraciasView, HerramientaList, HerramientaCreate, 
     HerramientaDelete, HerramientaUpdate, LibroList, LibroCreate, 
-    LibroDelete, LibroUpdate)
+    LibroDelete, LibroUpdate, nuevo_mensaje, MensajeDelete, MensajeList)
 
 app_name = 'pfea_app'
 urlpatterns = [
@@ -34,6 +34,11 @@ urlpatterns = [
     url(r'^donativos/$', DonativosView.as_view(), name='donativos'),
     url(r'^voluntarios/$', SolicitudDeVoluntariosCreate.as_view(), name='voluntarios'),
     url(r'^gracias/$', GraciasView.as_view(), name='gracias'),
+
+    # Mensajes
+    url(r'^mandar_mensaje/$', nuevo_mensaje, name='nuevo_mensaje'),
+    url(r'^mensajes/$', MensajeList.as_view(), name='mensajes'),
+    url(r'^mensajes/(?P<pk>\d+)/borrar/$', MensajeDelete.as_view(), name='borrar_mensaje'),
 
     # Voluntarios
     url(r'^voluntarios/solicitudes/$', SolicitudDeVoluntariosList.as_view(), name='solicitudes'),
